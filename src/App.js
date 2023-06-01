@@ -1,4 +1,4 @@
-import {AppBar, Toolbar} from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import {
   NavLink,
   Navigate,
@@ -6,8 +6,9 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import MainPage from "./MainPage";
-import Sub1Page from "./Sub1Page";
+
+import MainPage from "./pages/MainPage";
+import WritePage from "./pages/WritePage";
 
 function App() {
   const location = useLocation();
@@ -17,19 +18,21 @@ function App() {
       <AppBar position="static">
         <Toolbar>
           <div className="flex-1"></div>
-          <div className="font-bold">YEON JI NOTE</div>
+          <div className="font-bold select-none">YEON JI NOTE</div>
           <div className="flex-1 flex justify-end">
-            {location.pathname != "/sub1" && (
-              <NavLink to="/sub1">서브1</NavLink>
+            {location.pathname != "/write" && (
+              <NavLink to="/write">글작성</NavLink>
             )}
-            {location.pathname == "/sub1" && <NavLink to="/main">메인</NavLink>}
+            {location.pathname == "/write" && (
+              <NavLink to="/main">메인</NavLink>
+            )}
           </div>
         </Toolbar>
       </AppBar>
 
       <Routes>
         <Route path="/main" element={<MainPage />} />
-        <Route path="/sub1" element={<Sub1Page />} />
+        <Route path="/write" element={<WritePage />} />
         <Route path="/*" element={<Navigate to="/main" />} />
       </Routes>
     </>
