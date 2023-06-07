@@ -27,8 +27,11 @@ export default function WritePage() {
       form.content.value
     );
     noticeSnackbarState.open(`${newTodoId}번 할 일이 추가되었습니다.`);
+    form.content.value = "";
+    form.content.focus();
   };
 
+  
   return (
     <>
       <form className="flex-1 flex p-10 flex-col gap-7" onSubmit={onSubmit}>
