@@ -19,20 +19,18 @@ function App() {
     <>
       <AppBar position="static">
         <Toolbar>
-          <div className="flex-1"></div>
-          <div className="font-bold select-none">YEON JI NOTE</div>
-          <div className="flex-1 flex justify-end">
+          <NavLink to = "/main" className="font-bold select-none flex-self-stretch itmes-center mx-auto">YEON JI NOTE</NavLink>
             {location.pathname == "/main" && (
-            <NavLink to="/write" className="select-none">
+            <NavLink to="/write" className="select-none flex-self-stretch itmes-center">
               할 일 추가
               </NavLink>
             )}
             {location.pathname != "/main" && (
-              <NavLink to="/main" className="select-none">
+              <NavLink to="/main" className="select-none flex-self-stretch itmes-center">
               리스트
             </NavLink>
             )}
-          </div>
+          
         </Toolbar>
       </AppBar>
 
