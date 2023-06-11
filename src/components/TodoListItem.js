@@ -23,7 +23,7 @@ export default function TodoListItem({
             className="!pt-1"
           />
         </div>
-        <div className="mt-2 shadow rounded-[20px] flex">
+        <div className="mt-2 sm:mt-4 shadow rounded-[20px] flex">
           <Button
             className="flex-shrink-0 !items-start !rounded-[20px_0_0_20px]"
             color="inherit"
