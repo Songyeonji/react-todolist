@@ -7,6 +7,7 @@ export default function TodoListItem({
   openDrawer,
   onCompletedBtnClicked,
 }) {
+  
   return (
     <>
       <li key={todo.id} className="mt-6 sm:mt-10">
@@ -16,12 +17,21 @@ export default function TodoListItem({
             variant="outlined"
             className="!pt-1"
           />
+          {todo.performDate && todo.performDate.length >= 16 ? (
           <Chip
-            label={todo.performDate.substr(2,14)}
+            label={todo.performDate.substr(2, 14)}
             color="primary"
             variant="outlined"
             className="!pt-1"
           />
+          ) : (
+          <Chip
+            label={todo.performDate}
+            color="primary"
+            variant="outlined"
+            className="!pt-1"
+          />
+          )}
         </div>
         <div className="mt-2 sm:mt-4 shadow rounded-[20px] flex">
           <Button

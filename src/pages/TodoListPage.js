@@ -1,13 +1,13 @@
 import { Tab, Tabs } from "@mui/material";
+
 import { useTodosState, useTodoOptionDrawerState } from "../hooks";
 import TodoOptionDrawer from "../components/TodoOptionDrawer";
 import TodoListItem from "../components/TodoListItem";
 import {
-    TodoList__filterCompletedIndexAtom,
-    TodoList__sortIndexAtom,
-  } from "../atoms";
-  import { useRecoilState, useResetRecoilState } from "recoil";
-
+  TodoList__filterCompletedIndexAtom,
+  TodoList__sortIndexAtom,
+} from "../atoms";
+import { useRecoilState, useResetRecoilState } from "recoil";
 
 export default function TodoList() {
   const todosState = useTodosState();
@@ -18,6 +18,7 @@ export default function TodoList() {
   );
 
   const [sortIndex, setSortIndex] = useRecoilState(TodoList__sortIndexAtom);
+
   const getFilteredTodos = () => {
     if (filterCompletedIndex == 1) {
       return todosState.todos.filter((todo) => !todo.completed);
@@ -55,13 +56,13 @@ export default function TodoList() {
 
     return filteredTodos;
   };
+
   const sortedTodos = getSortedTodos();
-
-
 
   return (
     <>
       <TodoOptionDrawer state={todoOptionDrawerState} />
+
       <Tabs
         variant="fullWidth"
         value={filterCompletedIndex}
@@ -95,6 +96,7 @@ export default function TodoList() {
           value={2}
         />
       </Tabs>
+
       <Tabs
         variant="scrollable"
         value={sortIndex}
@@ -149,9 +151,9 @@ export default function TodoList() {
         />
       </Tabs>
 
-      <div className="mt-4 px-4">
+      <div className="px-5 pb-6 sm:px-8 sm:px-10">
         <ul>
-            {sortedTodos.map((todo, index) => (
+          {sortedTodos.map((todo, index) => (
             <TodoListItem
               key={todo.id}
               todo={todo}

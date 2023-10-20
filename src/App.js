@@ -19,11 +19,11 @@ function App() {
     <>
       <AppBar position="static">
         <Toolbar>
-        <NavLink
+          <NavLink
             to="/main"
             className="font-bold select-none flex self-stretch items-center mr-auto"
           >
-            YEON JI NOTE
+            YEON JI TODOLIST
           </NavLink>
           {location.pathname == "/main" && (
             <NavLink
@@ -41,11 +41,10 @@ function App() {
               리스트
             </NavLink>
           )}
-          
         </Toolbar>
       </AppBar>
 
-      <NoticeSnackbar/>
+      <NoticeSnackbar />
 
       <Routes>
         <Route path="/main" element={<MainPage />} />
