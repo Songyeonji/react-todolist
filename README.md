@@ -27,3 +27,7 @@
 프로젝트는 GitHub Pages를 통해 배포되었습니다. [여기](https://songyeonji.github.io/my-todolist/#/main)에서 프로젝트 소스 코드와 배포된 애플리케이션을 확인할 수 있습니다.
 
 ## 스크린샷
+![KakaoTalk_20240325_224542043](https://github.com/Songyeonji/react-todolist/assets/104824428/77b755dc-36aa-4b63-95b3-e85f2ab26079)
+![KakaoTalk_20240325_224426579](https://github.com/Songyeonji/react-todolist/assets/104824428/504c3cdc-9496-4b14-b1c1-c4862ffa3806)
+![KakaoTalk_20240325_224435186](https://github.com/Songyeonji/react-todolist/assets/104824428/80c91810-0f70-451a-a264-ef995a9914bf)
+![KakaoTalk_20240325_224501658](https://github.com/Songyeonji/react-todolist/assets/104824428/67a7ff9e-20e6-4ba6-a17f-a1793604dbc6)
